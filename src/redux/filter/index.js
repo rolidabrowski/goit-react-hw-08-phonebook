@@ -1,1 +1,1 @@
-export * from './filterSlice';
+export * from './slice';
