@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, deleteContact } from 'redux/operations';
 import {
+  fetchContacts,
+  deleteContact,
   selectFilteredContacts,
   selectIsLoading,
   selectError,
-} from 'redux/selectors';
+} from '../../redux';
 import css from './ContactList.module.css';
 
 export const ContactList = () => {
