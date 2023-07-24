@@ -1,6 +1,4 @@
-import { ContactForm } from '../../components';
-import { ContactList } from '../../components';
-import { Filter } from '../../components';
+import { ContactForm, ContactList, Filter } from 'components';
 import { Container } from './App.styled';
 
 export function App() {
