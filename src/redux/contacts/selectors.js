@@ -13,9 +13,9 @@ export const selectFilteredContacts = createSelector(
     }
     const normalizedFilter = filter.toLowerCase();
     const filteredContacts = contacts.filter(
-      ({ name, phone }) =>
+      ({ name, number }) =>
         name.toLowerCase().trim().includes(normalizedFilter) ||
-        phone.trim().includes(normalizedFilter)
+        number.trim().includes(normalizedFilter)
     );
     if (normalizedFilter && !filteredContacts.length) {
       alert(`No contacts matching your request`);

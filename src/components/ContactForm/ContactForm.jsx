@@ -8,19 +8,21 @@ import css from './ContactForm.module.css';
 
 const InitialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 const validationSchema = yup.object().shape({
   name: yup
     .string()
+    .trim()
     .matches(
       /^[\s\p{L}]+$/u,
       'Name may contain only letters and spaces. For example Adrian, Jacob Mercer and so on.'
     )
     .required(),
-  phone: yup
+  number: yup
     .string()
+    .trim()
     .phone(
       'PL',
       true,
@@ -33,28 +35,28 @@ export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
-  const isDuplicate = ({ name, phone }) => {
+  const isDuplicate = ({ name, number }) => {
     const normalizedName = name.toLowerCase().trim();
-    const normalizedNumber = phone.trim();
+    const normalizedNumber = number.trim();
 
     const duplicate = contacts.find(
-      ({ name, phone }) =>
+      ({ name, number }) =>
         name.toLowerCase().trim() === normalizedName ||
-        phone.trim() === normalizedNumber
+        number.trim() === normalizedNumber
     );
     return Boolean(duplicate);
   };
 
-  const saveContact = ({ name, phone }) => {
+  const saveContact = ({ name, number }) => {
     const form = document.querySelector('form');
-    if (isDuplicate({ name, phone })) {
+    if (isDuplicate({ name, number })) {
       return alert(
         contacts.find(contact => contact.name === name)
           ? `${name} is already in contacts`
-          : `${phone} is already in contacts`
+          : `${number} is already in contacts`
       );
     }
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     form.reset();
   };
 
@@ -75,8 +77,8 @@ export const ContactForm = () => {
           </label>
           <label className={css.item}>
             Number
-            <Field type="tel" name="phone" placeholder="Enter number" />
-            <ErrorMessage name="phone" component="span" />
+            <Field type="tel" name="number" placeholder="Enter number" />
+            <ErrorMessage name="number" component="span" />
           </label>
           <button type="submit" className={css.button}>
             Add contact
