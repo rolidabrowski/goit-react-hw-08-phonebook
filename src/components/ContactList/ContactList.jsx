@@ -30,10 +30,10 @@ export const ContactList = () => {
       {error && alert('Something went wrong')}
       {contacts?.length > 0 && (
         <ul>
-          {contacts.map(({ id, name, phone }) => (
+          {contacts.map(({ id, name, number }) => (
             <li className={css.item} key={id}>
               <span className={css.text}>{name}</span>
-              <span className={css.text}>{phone}</span>
+              <span className={css.text}>{number}</span>
               <button
                 type="button"
                 className={css.button}

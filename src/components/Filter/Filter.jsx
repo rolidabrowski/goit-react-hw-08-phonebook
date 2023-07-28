@@ -11,9 +11,10 @@ export const Filter = () => {
 
   return (
     <section className={css.filter}>
-      <label className={css.label}>
-        <p>Find contacts by name</p>
+      <label>
+        Find contacts by name
         <input
+          className={css.input}
           type="text"
           name="filter"
           placeholder="Enter name"

@@ -72,7 +72,7 @@ export const ContactForm = () => {
         <Form>
           <label className={css.item}>
             Name
-            <Field type="text" name="name" placeholder="Enter name" />
+            <Field type="name" name="name" placeholder="Enter name" />
             <ErrorMessage name="name" component="span" />
           </label>
           <label className={css.item}>

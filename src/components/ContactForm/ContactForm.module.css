@@ -1,6 +1,9 @@
 .form {
-  width: 300px;
-  padding: 15px;
+  font: 95%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #f7f7f7;
 }
 
 .item {
@@ -12,18 +15,49 @@
   color: #000;
 }
 
+.form {
+  font: 95%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #f7f7f7;
+}
+
+.form input[type='tel'],
+.form input[type='name'] {
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  border: 1px solid #ccc;
+  padding: 3%;
+  color: #555;
+  font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form input[type='tel']:hover,
+.form input[type='name']:hover,
+.form input[type='tel']:focus,
+.form input[type='name']:focus {
+  box-shadow: 0 0 5px #43d1af;
+  padding: 3%;
+  border: 1px solid #43d1af;
+}
+
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: #fff;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+  width: 100%;
+  padding: 3%;
+  background: #43d1af;
+  border-radius: 5px;
+  border-bottom: 2px solid #30c29e;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+}
+.button:hover {
+  background: #2ebc99;
 }

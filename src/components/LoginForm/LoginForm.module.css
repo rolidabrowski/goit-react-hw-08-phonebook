@@ -1,29 +1,25 @@
 .form {
-  font: 95% Arial, Helvetica, sans-serif;
+  font: 95%;
   max-width: 400px;
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 16px;
   background: #f7f7f7;
 }
 .title {
+  max-width: 400px;
+  margin: 0 auto;
   background: #43d1af;
   padding: 20px 0;
   font-size: 140%;
   font-weight: 300;
   text-align: center;
   color: #fff;
-  margin: -16px -16px 16px -16px;
 }
 .form input[type='email'],
 .form input[type='password'] {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   width: 100%;
   background: #fff;
   margin-top: 2%;
@@ -44,12 +40,10 @@
 }
 
 .button {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   width: 100%;
   padding: 3%;
   background: #43d1af;
+  border-radius: 5px;
   border-bottom: 2px solid #30c29e;
   border-top-style: none;
   border-right-style: none;
